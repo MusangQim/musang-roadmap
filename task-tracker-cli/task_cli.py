@@ -5,19 +5,21 @@ from task_status import mark_status, list_tasks
 
 def task_cli() -> None:
     command = sys.argv[1]
-    id_input = int(sys.argv[2])
     if command == "add":
         add_task(sys.argv[2])
     elif command == "update":
-        update_task(id_input, sys.argv[3])
+        update_task(int(sys.argv[2]), sys.argv[3])
     elif command == "delete":
-        delete_task(id_input)
+        delete_task(int(sys.argv[2]))
     elif command == "mark-in-progress":
-        mark_status(id_input, "in-progress")
+        mark_status(int(sys.argv[2]), "in-progress")
     elif command == "mark-done":
-        mark_status(id_input, "done")
+        mark_status(int(sys.argv[2]), "done")
     elif command == "list":
-        list_tasks(sys.argv[2])
+        if len(sys.argv) >= 3:
+            list_tasks(sys.argv[2])
+        else:
+            list_tasks()
     else:
         print("Unknown command")
 

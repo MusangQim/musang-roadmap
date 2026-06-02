@@ -15,7 +15,7 @@ def add_task(description):
     new_task = create_task(id, description)
     tasks.append(new_task)
     save_tasks(tasks)
-    print(f"Task added successfully (ID: {id})")
+    print(f"ADD: The tasks successfully added (ID: {id})!")
 
 
 def update_task(id, description):
@@ -26,7 +26,7 @@ def update_task(id, description):
             update = True
             task["description"] = description
             task["updatedAt"] = datetime.datetime.now().strftime("%c")
-            print("Successfully update")
+            print("UPDATE: The tasks successfully updated!")
     if not update:
         print("Error")
         return
@@ -39,9 +39,10 @@ def delete_task(id):
     for task in tasks:
         if task["id"] == id:
             found = True
+            print("DELETE: The tasks successfully deleted!")
             break
     if not found:
-        print("Error")
+        print("Error: This ID have been deleted!")
         return
     tasks = [task for task in tasks if task["id"] != id]
     save_tasks(tasks)

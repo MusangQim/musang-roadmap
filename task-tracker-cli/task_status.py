@@ -21,12 +21,32 @@ def mark_status(id, new_status):
 
 def list_tasks(filter=None):
     tasks = load_tasks()
+    if not tasks:
+        print("No tasks found!!!")
+        return
+    # Header Output
+    print(f"{'ID':<5} {'Description':<25} {'Status':<15} {'Created'}")
+    # Divider
+    print("-" * 80)
     if filter is None:
-        print(tasks)
+        for task in tasks:
+            format = (
+                  f"{task['id']:<6}"
+                  f"{task['description']:<26}"
+                  f"{task['status']:<16}"
+                  f"{task['createdAt']}"
+            )
+            print(format)
     else:
         for task in tasks:
             if task["status"] == filter:
-                print(task)
+                format = (
+                  f"{task['id']:<6}"
+                  f"{task['description']:<26}"
+                  f"{task['status']:<16}"
+                  f"{task['createdAt']}"
+                )
+            print(format)
 
 
 def main() -> None:

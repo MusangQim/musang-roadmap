@@ -11,6 +11,8 @@ def load_tasks() -> list:
     return (content)
 
 
+# testing_only
+'''
 def main() -> None:
     tasks = load_tasks()
     print(tasks)
@@ -18,3 +20,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+'''

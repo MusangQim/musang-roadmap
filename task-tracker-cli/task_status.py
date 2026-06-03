@@ -30,14 +30,15 @@ def list_tasks(filter=None):
     print(banner)
     tag = "---------- created by MusangQim ----------\n"
     print(tag.center(70))
-    print(f"{'ID':<5} {'Description':<25} {'Status':<15} {'Created'}")
+    print(f"{'ID':<5} {'Description':<30} {'Status':<15} {'Created'}")
     # Divider
     print("-" * 80)
+    # The List of Tasks
     if filter is None:
         for task in tasks:
             format = (
                   f"{task['id']:<6}"
-                  f"{task['description']:<26}"
+                  f"{task['description']:<31}"
                   f"{task['status']:<16}"
                   f"{task['createdAt']}"
             )
@@ -47,11 +48,11 @@ def list_tasks(filter=None):
             if task["status"] == filter:
                 format = (
                   f"{task['id']:<6}"
-                  f"{task['description']:<26}"
+                  f"{task['description']:<31}"
                   f"{task['status']:<16}"
                   f"{task['createdAt']}"
                 )
-            print(format)
+                print(format)
 
 
 def main() -> None:

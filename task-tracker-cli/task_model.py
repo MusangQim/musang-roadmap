@@ -13,6 +13,8 @@ def create_task(id, description) -> dict:
     return task
 
 
+# testing_only
+'''
 def main() -> None:
     task = create_task(1, "Test Task")
     print(task)
@@ -20,3 +22,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+'''

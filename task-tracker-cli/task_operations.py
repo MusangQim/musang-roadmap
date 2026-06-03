@@ -48,6 +48,8 @@ def delete_task(id):
     save_tasks(tasks)
 
 
+# testing_only
+'''
 def main() -> None:
     add_task("Beli roti")
     add_task("Solat")
@@ -57,3 +59,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+'''

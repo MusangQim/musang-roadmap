@@ -1,5 +1,5 @@
 from json_handler import load_tasks
-from task_operations import save_tasks, add_task
+from task_operations import save_tasks
 import datetime
 import pyfiglet
 
@@ -53,8 +53,11 @@ def list_tasks(filter=None):
                   f"{task['createdAt']}"
                 )
                 print(format)
+    print()
 
 
+# testing_only
+'''
 def main() -> None:
     add_task("Beli roti")
     add_task("Solat")
@@ -67,3 +70,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+'''

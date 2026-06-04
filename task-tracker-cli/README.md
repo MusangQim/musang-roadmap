@@ -2,15 +2,20 @@
 ## Description
 
 ## Requirements
+- Python
 
 ## Installation
-If you wish to check basic syntax errors you can install flake8
+1. Clone this repository first
+```bash
+git clone https://github.com/MusangQim/
+```
+If you want to check basic syntax errors, you can install flake8
 ```bash
 pip install flake8
 
 flake8 <file.py>
 ```
-If you wish to check basic syntax errors you can install flake8
+If you want to verify data types or static type, you can install flake8
 ```bash
 pip install mypy
 

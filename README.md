@@ -7,18 +7,28 @@
 ## Installation
 1. Clone this repository first
 ```bash
-git clone https://github.com/MusangQim/
+git clone https://github.com/MusangQim/musang-task_tracker
 ```
-If you want to check basic syntax errors, you can install flake8
+
+2. Navigate to project folder
+```bash
+cd musang-task_tracker
+```
+
+3. There a lot of file Python in the folder. Run using python3
+```bash
+python3 <file.py>
+```
+
+4. If you want to check basic syntax errors, you can install flake8
 ```bash
 pip install flake8
-
 flake8 <file.py>
 ```
-If you want to verify data types or static type, you can install flake8
+
+5. If you want to verify data types or static type, you can install flake8
 ```bash
 pip install mypy
-
 python3 -m mypy <file.py>
 ```
 

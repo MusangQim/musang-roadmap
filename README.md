@@ -1,8 +1,5 @@
 # Task-Tracker-Cli
-## Description
-
-## Requirements
-- Python
+A simple Command Line Interface (CLI) application for tracking and managing daily tasks. Users can create, update, delete, and monitor task status such as todo, in-progress, and done. The project demonstrates file handling, user input processing, and basic data persistence in a CLI environment.
 
 ## Installation
 1. Clone this repository first
@@ -15,9 +12,9 @@ git clone https://github.com/MusangQim/musang-task_tracker
 cd musang-task_tracker
 ```
 
-3. There a lot of file Python in the folder. Run using python3
+3. Run the main CLI app
 ```bash
-python3 <file.py>
+python3 task_cli.py
 ```
 
 4. If you want to check basic syntax errors, you can install flake8
@@ -35,21 +32,20 @@ python3 -m mypy <file.py>
 ## Usage
 ```python
 # Add Task
-# Put "" if argument more than 2. Example: "Jog and Breakfast"
+ # Put " " if argument more than two (Example: "Jog and Breakfast")
 python3 task_cli.py add "<description>"
 
 # Update Task
-# Choose which ID you want and update with new description
+ # Choose which ID you want and update with new description
 python3 task_cli.py update <id> "<description>"
 
 
 # Delete Task
-# Choose which ID you want to delete
+ # Choose which ID you want to delete
 python3 task_cli.py delete <id>
 
 # Mark Status
-# Mark the task using "todo", "in-progress" and "done"
-python3 task_cli.py mark-todo <id>
+ # Mark the task using "todo", "in-progress" and "done"
 python3 task_cli.py mark-in-progress <id>
 python3 task_cli.py mark-done <id>
 
@@ -57,7 +53,7 @@ python3 task_cli.py mark-done <id>
 python3 task_cli.py list
 
 # List Specific Task
-# List tasks according to the status
+ # List tasks according to the status
 python3 task_cli.py list todo
 python3 task_cli.py list in-progress
 python3 task_cli.py list done
@@ -70,3 +66,6 @@ python3 task_cli.py list done
 - task_operations.py - implementing CRUD operation (Create, Read, Update, Delete) into list of tasks dict.
 - task_status.py - implementing status management and filtering (mark-done, mark-in-progress, mark-done, list)
 - task_cli.py - combining all files from argv_parser until task_status to create Task Tracker CLI
+
+## Source
+Project idea from [roadmap.sh](https://roadmap.sh/projects/task-tracker)

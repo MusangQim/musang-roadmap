@@ -26,13 +26,42 @@ pip install flake8
 flake8 <file.py>
 ```
 
-5. If you want to verify data types or static type, you can install flake8
+5. If you want to verify data types or static type, you can install mypy
 ```bash
 pip install mypy
 python3 -m mypy <file.py>
 ```
 
 ## Usage
+```python
+# Add Task
+# Put "" if argument more than 2. Example: "Jog and Breakfast"
+python3 task_cli.py add "<description>"
+
+# Update Task
+# Choose which ID you want and update with new description
+python3 task_cli.py update <id> "<description>"
+
+
+# Delete Task
+# Choose which ID you want to delete
+python3 task_cli.py delete <id>
+
+# Mark Status
+# Mark the task using "todo", "in-progress" and "done"
+python3 task_cli.py mark-todo <id>
+python3 task_cli.py mark-in-progress <id>
+python3 task_cli.py mark-done <id>
+
+# List All Tasks
+python3 task_cli.py list
+
+# List Specific Task
+# List tasks according to the status
+python3 task_cli.py list todo
+python3 task_cli.py list in-progress
+python3 task_cli.py list done
+```
 
 ## Project Structure
 - argv_parser.py - understanding on how CLI app receive the input() from terminal.

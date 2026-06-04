@@ -9,7 +9,7 @@ git clone https://github.com/MusangQim/musang-task_tracker
 
 2. Navigate to project folder
 ```bash
-cd musang-task_tracker
+cd musang-task_tracker/task-tracker-cli
 ```
 
 3. Run the main CLI app
